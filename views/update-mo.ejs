@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('include/head', { title: 'Update problem' }) %>
+  <link rel="stylesheet" href="/styles/form.css">
+</head>
+
+<body>
+  <%- include('include/header') %>
+  <main>
+    <h1>Update Problem</h1>
+    <form action="/problems/<%=problem.id%>/edit" method="POST">
+      <div class="form-control">
+        <label for="volume">Volume</label>
+        <input type="number" id="volume" value="<%=problem.volume%>" name="volume" required>
+      </div>
+      
+      <div class="form-control">
+        <label for="code">Code</label>
+        <input type="text" id="code" value="<%=problem.code%>" name="code" required>
+      </div>
+      
+      <div class="form-control">
+        <label for="content">Problem</label>
+        <textarea id="content"  name="content" required rows="5"><%=problem.body%></textarea>
+      </div>
+
+      <div class="form-control">
+        <label for="solution">Solution</label>
+        <input type="text" id="solution" value="<%=problem.solution%>" name="solution" required>
+      </div>
+      
+      <button class="btn">Update Problem</button>
+    </form>
+  </main>
+</body>
+
+</html>

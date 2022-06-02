@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('include/head', { title: 'All Problemss' }) %>
+  <link rel="stylesheet" href="/styles/mo.css">
+</head>
+
+<body>
+  <%- include('include/header') %>
+  <main id="all-posts">
+    <h1>Math Olympiad Problems</h1>
+  <% if (!problems || problems.length === 0)  {%>
+         <p> No problems found. </p>
+         <a class="btn" href="/new-post"> Create a new problem</a>
+         <hr/>
+  <% }  else { %>
+   <ol id="problems-list">
+   <% for (const problem of problems) { %>
+     <li>
+      <%- include('include/mo-item', {problem: problem}) %>
+     </li>
+   <% } %>
+ </ol>
+  <% } %>
+  </main>
+</body>
+
+</html>

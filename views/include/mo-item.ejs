@@ -1,0 +1,11 @@
+<article class="post-item">
+  <p> Volume: <%= problem.volume %></p>
+  <p class="post-item-author">Code:  <%=  problem.code %></p>
+  <div class="post-actions">
+    <form action="/problems/<%=problem.id%>/delete" method="POST">
+    <button class="btn btn-alt">Delete Problem</button>
+  </form>
+    <a href="/problems/<%=problem.id%>/edit">Edit Problem</a>
+    <a class="btn" href="/problems/<%=problem.id%>">View Problem</a>
+  </div>
+</article>

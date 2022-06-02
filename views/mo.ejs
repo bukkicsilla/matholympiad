@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('include/head', { title: problem.volume }) %>
+  <link rel="stylesheet" href="/styles/mo.css">
+</head>
+
+<body>
+  <%- include('include/header') %>
+  <main id="post-detail">
+    <h3>Volume: <%= problem.volume %>, <%= problem.code %></h3>
+    <section id="problem">
+      <p id="body"><%= problem.body %></p>
+    </section>
+      
+    <section id="solution">
+      <% if (problem.solution) { %>
+      <p class="solution">The solution is: <%= problem.solution %></p>
+      <% }  else {%>
+      <p class="solution"> What is the solution? </p>
+       <% } %>
+      <a class="btn" href="/problems/<%=problem.id%>/solution">View Solution</a>
+    </section>
+  </main>
+</body>
+
+</html>

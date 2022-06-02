@@ -1,0 +1,96 @@
+html {
+  font-family: 'Zilla Slab', serif;
+  color: rgb(42, 69, 42);
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  width: 80%;
+  margin: 3rem auto;
+}
+
+a {
+  text-decoration: none;
+  color: forestgreen;
+}
+
+a:hover,
+a:active {
+  color: rgb(0, 204, 0);
+}
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global components */
+
+.btn {
+  cursor: pointer;
+  font: inherit;
+  background-color: forestgreen;
+  border: 1px solid forestgreen;
+  color: white;
+  color: snow;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: rgb(0, 204, 0);
+  border-color: rgb(0, 204, 0);
+  color: white;
+  color: snow;
+}
+
+.btn.btn-alt {
+  background-color: transparent; 
+  border-color: transparent;
+  color: forestgreen;
+}
+
+.btn.btn-alt:hover,
+.btn.btn-alt:active {
+  color: rgb(0, 204, 0);
+}
+
+/* Site-wide content / elements */
+
+#main-header {
+  padding: 2rem 10%;
+  background-color: forestgreen;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo a {
+  font-size: 2rem;
+  font-weight: bold;
+  color: snow;
+  font-family: 'Zilla Slab', serif;
+}
+
+#main-header ul {
+  display: flex;
+}
+
+#main-header li {
+  margin-left: 2rem;
+}
+
+#main-header nav a {
+  color: snow;
+  font-size: 1.25rem;
+}
+
+#main-header nav a:hover,
+#main-header nav a:active {
+  color: gold;
+}
